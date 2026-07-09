@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Opiniones Trustpilot — Bravo Césped</title>
+<!--
+  ============================================================
+  PÁGINA DE EMBEBIDO PARA <iframe> (GitHub Pages)
+  ============================================================
+  Este archivo NO contiene el widget: lo carga en vivo desde
+  widget-trustpilot.html (única fuente de verdad) y ejecuta su
+  <script>, ya que los scripts insertados vía innerHTML no se
+  ejecutan automáticamente. Así, al actualizar las reseñas solo
+  hay que editar widget-trustpilot.html.
+
+  URL para el <iframe> en Webflow:
+  https://pattterns.github.io/trustpilot-bravocesped/embed.html
+-->
+<style>
+  html, body { margin: 0; padding: 0; background: transparent; }
+  #bravo-tp-mount:empty::before {
+    content: "Cargando opiniones…";
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #9f90c0;
+    padding: 2rem;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div id="bravo-tp-mount"></div>
+  <script>
+    (function () {
+      var mount = document.getElementById('bravo-tp-mount');
+      fetch('widget-trustpilot.html', { cache: 'no-store' })
+        .then(function (res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          return res.text();
+        })
+        .then(function (html) {
+          mount.innerHTML = html;
+          // Reinsertar los <script> para que se ejecuten (innerHTML no los corre).
+          var scripts = mount.querySelectorAll('script');
+          scripts.forEach(function (oldScript) {
+            var newScript = document.createElement('script');
+            newScript.textContent = oldScript.textContent;
+            oldScript.parentNode.replaceChild(newScript, oldScript);
+          });
+        })
+        .catch(function (err) {
+          mount.textContent = 'No se pudieron cargar las opiniones de Trustpilot.';
+          console.error('bravo-tp embed error:', err);
+        });
+    })();
+  </script>
+</body>
+</html>

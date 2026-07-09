@@ -65,6 +65,31 @@
 </div>
 
 <style>
+  /* ---- Tipografía de marca (self-hosted en el CDN de Webflow) ----
+     Necesaria aquí porque este archivo se sirve también standalone
+     dentro de un <iframe> (no hereda las fuentes de la página host). */
+  @font-face{
+    font-family:"Cabinetgrotesk";
+    src:url('https://cdn.prod.website-files.com/69527b42b580ff3acdfc85b8/69527d77ba72e3bc22b152b8_CabinetGrotesk-Regular.otf') format("opentype");
+    font-weight:400; font-style:normal; font-display:swap;
+  }
+  @font-face{
+    font-family:"Cabinetgrotesk";
+    src:url('https://cdn.prod.website-files.com/69527b42b580ff3acdfc85b8/69527d7702127800ad2344a0_CabinetGrotesk-Medium.otf') format("opentype");
+    font-weight:500; font-style:normal; font-display:swap;
+  }
+  @font-face{
+    font-family:"Cabinetgrotesk";
+    src:url('https://cdn.prod.website-files.com/69527b42b580ff3acdfc85b8/69527d77beafadabb29f1711_CabinetGrotesk-Extrabold.otf') format("opentype");
+    font-weight:700; font-style:normal; font-display:swap;
+  }
+  @font-face{
+    font-family:"Cabinetgrotesk";
+    src:url('https://cdn.prod.website-files.com/69527b42b580ff3acdfc85b8/69527d77a58136ab8ebbcfc8_CabinetGrotesk-Black.otf') format("opentype");
+    font-weight:900; font-style:normal; font-display:swap;
+  }
+  html,body{ margin:0; padding:0; background:transparent; }
+
   /* ---- Wrapper con scoping por #bravo-tp-widget ---- */
   #bravo-tp-widget{
     --btp-dark-green:#103a2e;
@@ -497,5 +522,28 @@
     track.addEventListener('scroll', updateNav, {passive:true});
     window.addEventListener('resize', updateNav);
     updateNav();
+
+    // ---- Auto-altura cuando se embebe en un <iframe> ----
+    // Informa al documento padre de la altura real del widget para que
+    // el iframe pueda ajustarse (evita scrollbars o huecos en blanco).
+    if (window.parent && window.parent !== window) {
+      var lastHeight = 0;
+      function reportHeight() {
+        var h = Math.ceil(root.getBoundingClientRect().height);
+        if (h !== lastHeight) {
+          lastHeight = h;
+          window.parent.postMessage({ type: 'bravo-tp-resize', height: h }, '*');
+        }
+      }
+      if (window.ResizeObserver) {
+        new ResizeObserver(reportHeight).observe(root);
+      } else {
+        window.addEventListener('resize', reportHeight);
+        setInterval(reportHeight, 500);
+      }
+      window.addEventListener('load', reportHeight);
+      setTimeout(reportHeight, 50);
+      setTimeout(reportHeight, 400);
+    }
   })();
 </script>
