@@ -1,0 +1,501 @@
+<!--
+  ============================================================
+  WIDGET TRUSTPILOT — BRAVO CÉSPED
+  Embebido HTML para Webflow (Custom Code / Embed)
+  Diseño integrado con la paleta y tipografía de bravocesped.com
+  Datos extraídos de https://es.trustpilot.com/review/www.bravocesped.com
+  ============================================================
+  Cómo usarlo en Webflow:
+  1. Arrastra un elemento "Embed Code" donde quieras la sección.
+  2. Pega todo este archivo dentro.
+  3. Publica.
+  (Para actualizar reseñas: edita el array BRAVO_TP.reviews más abajo.)
+-->
+<div id="bravo-tp-widget" data-tp-variant="lavanda">
+ <div class="bravo-tp">
+  <div class="bravo-tp__inner">
+
+    <!-- Cabecera: resumen de puntuación -->
+    <div class="bravo-tp__header">
+      <div class="bravo-tp__heading">
+        <div class="bravo-tp__eyebrow">Opiniones en Trustpilot</div>
+        <h2 class="bravo-tp__title">Lo que dicen de nosotros</h2>
+      </div>
+
+      <div class="bravo-tp__summary">
+        <a class="bravo-tp__brand" href="https://es.trustpilot.com/review/www.bravocesped.com" target="_blank" rel="noopener" aria-label="Ver opiniones en Trustpilot">
+          <img class="bravo-tp__tp-logo" src="https://res.cloudinary.com/dkdxeb1sh/image/upload/v1782385514/logo_truspilot_cqhlml.png" alt="Trustpilot" width="120" height="40" loading="lazy" />
+          <span class="bravo-tp__brand-box">
+            <span class="bravo-tp__score-wrap">
+              <span class="bravo-tp__score">4,5</span>
+              <span class="bravo-tp__score-max">/ 5</span>
+            </span>
+            <span class="bravo-tp__stars bravo-tp__stars--green" aria-label="4,5 de 5 estrellas">
+              <svg class="bravo-tp__star is-filled" viewBox="0 0 20 19" width="20" height="19"><path d="M9.07.61c.34-.81 1.51-.81 1.86 0l2.03 4.82c.14.34.47.58.84.61l5.27.42c.89.07 1.25 1.17.57 1.75l-4.01 3.39c-.29.25-.41.62-.32.99l1.22 5.07c.21.86-.74 1.54-1.5 1.08l-4.51-2.72c-.32-.2-.73-.2-1.05 0l-4.51 2.72c-.76.46-1.71-.22-1.5-1.08l1.22-5.07c.09-.37-.03-.74-.32-.99L.35 8.2c-.68-.58-.32-1.68.57-1.75l5.27-.42c.38-.03.7-.27.85-.61L9.07.61Z" fill="currentColor"/></svg>
+              <svg class="bravo-tp__star is-filled" viewBox="0 0 20 19" width="20" height="19"><path d="M9.07.61c.34-.81 1.51-.81 1.86 0l2.03 4.82c.14.34.47.58.84.61l5.27.42c.89.07 1.25 1.17.57 1.75l-4.01 3.39c-.29.25-.41.62-.32.99l1.22 5.07c.21.86-.74 1.54-1.5 1.08l-4.51-2.72c-.32-.2-.73-.2-1.05 0l-4.51 2.72c-.76.46-1.71-.22-1.5-1.08l1.22-5.07c.09-.37-.03-.74-.32-.99L.35 8.2c-.68-.58-.32-1.68.57-1.75l5.27-.42c.38-.03.7-.27.85-.61L9.07.61Z" fill="currentColor"/></svg>
+              <svg class="bravo-tp__star is-filled" viewBox="0 0 20 19" width="20" height="19"><path d="M9.07.61c.34-.81 1.51-.81 1.86 0l2.03 4.82c.14.34.47.58.84.61l5.27.42c.89.07 1.25 1.17.57 1.75l-4.01 3.39c-.29.25-.41.62-.32.99l1.22 5.07c.21.86-.74 1.54-1.5 1.08l-4.51-2.72c-.32-.2-.73-.2-1.05 0l-4.51 2.72c-.76.46-1.71-.22-1.5-1.08l1.22-5.07c.09-.37-.03-.74-.32-.99L.35 8.2c-.68-.58-.32-1.68.57-1.75l5.27-.42c.38-.03.7-.27.85-.61L9.07.61Z" fill="currentColor"/></svg>
+              <svg class="bravo-tp__star is-filled" viewBox="0 0 20 19" width="20" height="19"><path d="M9.07.61c.34-.81 1.51-.81 1.86 0l2.03 4.82c.14.34.47.58.84.61l5.27.42c.89.07 1.25 1.17.57 1.75l-4.01 3.39c-.29.25-.41.62-.32.99l1.22 5.07c.21.86-.74 1.54-1.5 1.08l-4.51-2.72c-.32-.2-.73-.2-1.05 0l-4.51 2.72c-.76.46-1.71-.22-1.5-1.08l1.22-5.07c.09-.37-.03-.74-.32-.99L.35 8.2c-.68-.58-.32-1.68.57-1.75l5.27-.42c.38-.03.7-.27.85-.61L9.07.61Z" fill="currentColor"/></svg>
+              <svg class="bravo-tp__star is-half" viewBox="0 0 20 19" width="20" height="19"><defs><linearGradient id="bravo-tp-half"><stop offset="50%" stop-color="currentColor"/><stop offset="50%" stop-color="transparent"/></linearGradient></defs><path d="M9.07.61c.34-.81 1.51-.81 1.86 0l2.03 4.82c.14.34.47.58.84.61l5.27.42c.89.07 1.25 1.17.57 1.75l-4.01 3.39c-.29.25-.41.62-.32.99l1.22 5.07c.21.86-.74 1.54-1.5 1.08l-4.51-2.72c-.32-.2-.73-.2-1.05 0l-4.51 2.72c-.76.46-1.71-.22-1.5-1.08l1.22-5.07c.09-.37-.03-.74-.32-.99L.35 8.2c-.68-.58-.32-1.68.57-1.75l5.27-.42c.38-.03.7-.27.85-.61L9.07.61Z" fill="url(#bravo-tp-half)" stroke="currentColor" stroke-width="0.6"/></svg>
+            </span>
+            <span class="bravo-tp__count">Basado en <strong>27</strong> opiniones</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Carrusel de reseñas -->
+    <div class="bravo-tp__track-wrap">
+      <button class="bravo-tp__nav bravo-tp__nav--prev" type="button" aria-label="Reseñas anteriores">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <div class="bravo-tp__track-viewport">
+        <div class="bravo-tp__track" role="list" id="bravo-tp-track"></div>
+      </div>
+      <button class="bravo-tp__nav bravo-tp__nav--next" type="button" aria-label="Reseñas siguientes">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+
+    <!-- Pie -->
+    <div class="bravo-tp__footer">
+      <a class="bravo-tp__cta" href="https://es.trustpilot.com/review/www.bravocesped.com" target="_blank" rel="noopener">Ver las 27 opiniones en Trustpilot</a>
+      <a class="bravo-tp__write" href="https://es.trustpilot.com/evaluate/www.bravocesped.com" target="_blank" rel="noopener">Escribir una opinión</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* ---- Wrapper con scoping por #bravo-tp-widget ---- */
+  #bravo-tp-widget{
+    --btp-dark-green:#103a2e;
+    --btp-full-purple:#3b3648;
+    --btp-dark-purple:#4f4860;
+    --btp-md-purple:#9f90c0;
+    --btp-light-purple:#c7b5f1;
+    --btp-main-purple:#ddd2fa;
+    --btp-soft-purple:#f3f0fc;
+    --btp-yellow:#efea2f;
+    --btp-light-yellow:#f3f06d;
+    --btp-bg-alt:#ffffd8;
+    --btp-soft-green:#dce8be;
+    --btp-white:#ffffff;
+    --btp-font: "Cabinetgrotesk", "Cabinet Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    box-sizing:border-box;
+    font-family:var(--btp-font);
+    color:var(--btp-dark-green);
+    background:var(--btp-main-purple);
+    border-radius:1.5rem;
+    padding:clamp(1.5rem,4vw,3.5rem);
+    width:100%;
+    max-width:1100px;
+    margin-inline:auto;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  #bravo-tp-widget *,
+  #bravo-tp-widget *::before,
+  #bravo-tp-widget *::after{ box-sizing:border-box; }
+
+  /* Variantes de fondo (cambiar data-tp-variant en #bravo-tp-widget) */
+  #bravo-tp-widget[data-tp-variant="verde"]{ background:var(--btp-soft-green); --btp-fade:#dce8be; }
+  #bravo-tp-widget[data-tp-variant="crema"]{ background:var(--btp-bg-alt); --btp-fade:#ffffd8; }
+  #bravo-tp-widget[data-tp-variant="lavanda"]{ background:var(--btp-main-purple); --btp-fade:#ddd2fa; }
+  #bravo-tp-widget[data-tp-variant="oscuro"]{
+    background:var(--btp-dark-green);
+    color:var(--btp-main-purple);
+    --btp-fade:#103a2e;
+  }
+  #bravo-tp-widget[data-tp-variant="oscuro"] .bravo-tp__title,
+  #bravo-tp-widget[data-tp-variant="oscuro"] .bravo-tp__eyebrow,
+  #bravo-tp-widget[data-tp-variant="oscuro"] .bravo-tp__count{ color:var(--btp-main-purple); }
+  #bravo-tp-widget[data-tp-variant="oscuro"] .bravo-tp__card{
+    background:rgba(255,255,255,.06);
+    border-color:rgba(199,181,241,.35);
+  }
+  #bravo-tp-widget[data-tp-variant="oscuro"] .bravo-tp__card-title,
+  #bravo-tp-widget[data-tp-variant="oscuro"] .bravo-tp__card-body{ color:#f3f0fc; }
+  #bravo-tp-widget[data-tp-variant="oscuro"] .bravo-tp__card-name{ color:#fff; }
+  #bravo-tp-widget[data-tp-variant="oscuro"] .bravo-tp__card-date{ color:var(--btp-light-purple); }
+
+  #bravo-tp-widget .bravo-tp__inner{
+    display:flex; flex-direction:column; gap:clamp(1.5rem,3vw,2.5rem);
+  }
+
+  /* Cabecera */
+  #bravo-tp-widget .bravo-tp__header{
+    display:grid; gap:1.75rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width:760px){
+    #bravo-tp-widget .bravo-tp__header{
+      grid-template-columns: 1fr auto;
+      align-items:center;
+      justify-content:space-between;
+      gap:2rem;
+    }
+  }
+  #bravo-tp-widget .bravo-tp__heading{ display:flex; flex-direction:column; gap:.5rem; }
+  #bravo-tp-widget .bravo-tp__eyebrow{
+    font-size:.85rem; font-weight:700; letter-spacing:.04em;
+    text-transform:uppercase; color:var(--btp-dark-purple);
+  }
+  #bravo-tp-widget .bravo-tp__title{
+    margin:0; font-size:clamp(1.6rem,3vw,2.25rem); line-height:1.15;
+    font-weight:700; color:var(--btp-full-purple);
+  }
+
+  /* Resumen */
+  #bravo-tp-widget .bravo-tp__summary{
+    display:flex; flex-direction:column; gap:.6rem; align-items:flex-start;
+  }
+  #bravo-tp-widget .bravo-tp__score-wrap{
+    display:flex; align-items:baseline; gap:.3rem;
+  }
+  #bravo-tp-widget .bravo-tp__score{
+    font-size:2.5rem; font-weight:800; color:var(--btp-dark-green); line-height:1;
+  }
+  #bravo-tp-widget .bravo-tp__score-max{
+    font-size:1rem; font-weight:600; color:var(--btp-dark-purple);
+  }
+  #bravo-tp-widget .bravo-tp__stars{
+    display:flex; gap:.2rem; color:var(--btp-light-purple);
+  }
+  #bravo-tp-widget .bravo-tp__stars--green{ color:#00b67a; }
+  #bravo-tp-widget .bravo-tp__star.is-filled{ color:currentColor; }
+  #bravo-tp-widget .bravo-tp__star.is-half{ color:currentColor; }
+  #bravo-tp-widget .bravo-tp__count{ font-size:.9rem; color:var(--btp-dark-purple); }
+  #bravo-tp-widget .bravo-tp__count strong{ color:var(--btp-dark-green); }
+
+  /* Caja de marca Trustpilot (con el logo del usuario) */
+  #bravo-tp-widget .bravo-tp__brand{
+    display:inline-flex; align-items:center; gap:.75rem; text-decoration:none;
+    background:#fff; color:#1b1b1b; padding:.6rem .9rem; border-radius:.6rem;
+    align-self:flex-start; transition:transform .2s ease, box-shadow .2s ease;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+  }
+  #bravo-tp-widget .bravo-tp__brand:hover{
+    transform:translateY(-1px);
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+  }
+  #bravo-tp-widget .bravo-tp__tp-logo{
+    display:inline-flex; height:34px; width:auto; object-fit:contain;
+  }
+  #bravo-tp-widget .bravo-tp__brand-box{
+    display:flex; flex-direction:column; gap:.2rem; align-items:flex-start;
+    border-left:1px solid rgba(0,0,0,.1); padding-left:.75rem;
+  }
+
+  /* (Distribución eliminada — ya no se muestran las barras) */
+
+  /* Carrusel */
+  #bravo-tp-widget .bravo-tp__track-wrap{ position:relative; }
+  #bravo-tp-widget .bravo-tp__track-viewport{ position:relative; }
+  #bravo-tp-widget .bravo-tp__track-viewport::before,
+  #bravo-tp-widget .bravo-tp__track-viewport::after{
+    content:""; position:absolute; top:0; bottom:1rem; width:60px; z-index:3;
+    pointer-events:none; opacity:1; transition:opacity .25s ease;
+  }
+  #bravo-tp-widget .bravo-tp__track-viewport::before{
+    left:0; background:linear-gradient(to right, var(--btp-fade), transparent);
+  }
+  #bravo-tp-widget .bravo-tp__track-viewport::after{
+    right:0; background:linear-gradient(to left, var(--btp-fade), transparent);
+  }
+  /* Sin difuminado en los extremos: primera carta (izda) y última (dcha) */
+  #bravo-tp-widget .bravo-tp__track-viewport.is-start::before{ opacity:0; }
+  #bravo-tp-widget .bravo-tp__track-viewport.is-end::after{ opacity:0; }
+  #bravo-tp-widget .bravo-tp__track{
+    display:grid; grid-auto-flow:column; grid-auto-columns:minmax(280px,1fr);
+    gap:1.25rem; overflow-x:auto; scroll-snap-type:x proximity; scroll-behavior:auto;
+    padding:.25rem 0 1rem; scrollbar-width:none;
+  }
+  #bravo-tp-widget .bravo-tp__track::-webkit-scrollbar{ display:none; }
+  @media (min-width:760px){
+    #bravo-tp-widget .bravo-tp__track{ grid-auto-columns:minmax(300px,340px); }
+  }
+
+  #bravo-tp-widget .bravo-tp__card{
+    scroll-snap-align:start;
+    border:2px solid var(--btp-md-purple);
+    background:var(--btp-soft-purple);
+    border-radius:1rem; padding:1.5rem;
+    display:flex; flex-direction:column; gap:.85rem;
+    transition:background .25s ease, transform .25s ease, box-shadow .25s ease;
+  }
+  #bravo-tp-widget .bravo-tp__card:hover{
+    background:var(--btp-white);
+    transform:translateY(-2px);
+    box-shadow:0 8px 24px rgba(79,72,96,.12);
+  }
+  #bravo-tp-widget .bravo-tp__card-stars{
+    display:flex; gap:.2rem; color:var(--btp-light-purple);
+  }
+  #bravo-tp-widget .bravo-tp__card-title{
+    margin:0; font-size:1.05rem; font-weight:700; color:var(--btp-dark-purple); line-height:1.3;
+  }
+  #bravo-tp-widget .bravo-tp__card-body{
+    margin:0; font-size:.92rem; color:var(--btp-full-purple); line-height:1.55;
+    display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  #bravo-tp-widget .bravo-tp__card.is-short .bravo-tp__card-body,
+  #bravo-tp-widget .bravo-tp__card.is-expanded .bravo-tp__card-body{
+    -webkit-line-clamp:none;
+  }
+  #bravo-tp-widget .bravo-tp__card-toggle{
+    display:inline-flex; align-items:center; gap:.3rem;
+    background:none; border:none; padding:0; cursor:pointer;
+    font-family:inherit; font-size:.85rem; font-weight:700;
+    color:var(--btp-dark-green); transition:color .2s ease;
+    align-self:flex-start;
+  }
+  #bravo-tp-widget .bravo-tp__card-toggle:hover{ color:var(--btp-full-purple); }
+  #bravo-tp-widget .bravo-tp__card-toggle-icon{ transition:transform .25s ease; }
+  #bravo-tp-widget .bravo-tp__card-meta{
+    margin-top:auto; display:flex; flex-direction:column; gap:.15rem;
+    border-top:1px solid rgba(159,144,192,.3); padding-top:.75rem;
+  }
+  #bravo-tp-widget .bravo-tp__card-name{
+    font-size:.9rem; font-weight:700; color:var(--btp-dark-green);
+    display:flex; align-items:center; gap:.5rem;
+  }
+  #bravo-tp-widget .bravo-tp__avatar{
+    width:26px; height:26px; border-radius:50%; flex:0 0 auto;
+    background:var(--btp-light-purple); color:var(--btp-dark-green);
+    display:flex; align-items:center; justify-content:center;
+    font-size:.75rem; font-weight:800;
+  }
+  #bravo-tp-widget .bravo-tp__card-date{
+    font-size:.78rem; color:var(--btp-dark-purple);
+  }
+  #bravo-tp-widget .bravo-tp__verified{
+    display:inline-flex; align-items:center; gap:.25rem;
+    font-size:.72rem; color:#114e0b; font-weight:600;
+  }
+  #bravo-tp-widget .bravo-tp__verified svg{ color:#2ea043; }
+
+  /* Navegación */
+  #bravo-tp-widget .bravo-tp__nav{
+    position:absolute; top:50%;
+    /* Centrado sobre las tarjetas: se compensa el padding inferior (1rem) del track */
+    transform:translateY(calc(-50% - 0.375rem));
+    width:44px; height:44px; border-radius:50%; cursor:pointer;
+    border:1px solid rgba(16,58,46,.12);
+    background:var(--btp-white); color:var(--btp-dark-green);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 18px rgba(16,58,46,.18);
+    transition:background .2s ease, color .2s ease, opacity .2s ease, transform .2s ease;
+    /* Por encima del degradado lateral (z-index 3) para que no quede tapada */
+    z-index:5;
+  }
+  #bravo-tp-widget .bravo-tp__nav:hover{
+    background:var(--btp-dark-green); color:#fff;
+    transform:translateY(calc(-50% - 0.375rem)) scale(1.06);
+  }
+  #bravo-tp-widget .bravo-tp__nav:active{
+    transform:translateY(calc(-50% - 0.375rem)) scale(0.96);
+  }
+  #bravo-tp-widget .bravo-tp__nav:focus-visible{
+    outline:2px solid var(--btp-dark-green); outline-offset:2px;
+  }
+  #bravo-tp-widget .bravo-tp__nav:disabled{ opacity:0; pointer-events:none; }
+  #bravo-tp-widget .bravo-tp__nav--prev{ left:-14px; }
+  #bravo-tp-widget .bravo-tp__nav--next{ right:-14px; }
+  /* En la variante oscura, borde sutil claro para que el botón blanco no quede plano */
+  #bravo-tp-widget[data-tp-variant="oscuro"] .bravo-tp__nav{
+    border-color:rgba(255,255,255,.25);
+  }
+  #bravo-tp-widget[data-tp-variant="oscuro"] .bravo-tp__nav:hover{
+    background:var(--btp-white); color:var(--btp-dark-green);
+  }
+  @media (max-width:520px){
+    #bravo-tp-widget .bravo-tp__nav{ display:none; }
+  }
+
+  /* Pie */
+  #bravo-tp-widget .bravo-tp__footer{
+    display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; align-items:center;
+    border-top:1px solid rgba(159,144,192,.4); padding-top:1.5rem;
+  }
+  #bravo-tp-widget .bravo-tp__cta{
+    display:inline-block; text-decoration:none;
+    background:var(--btp-dark-green); color:#fff;
+    padding:.85rem 1.5rem; border-radius:99px; font-weight:600; font-size:.95rem;
+    transition:background .2s, transform .2s;
+  }
+  #bravo-tp-widget .bravo-tp__cta:hover{ background:var(--btp-full-purple); transform:translateY(-1px); }
+  #bravo-tp-widget .bravo-tp__write{
+    text-decoration:none; color:var(--btp-dark-green); font-weight:600; font-size:.95rem;
+    border-bottom:2px solid currentColor; padding-bottom:1px;
+  }
+  #bravo-tp-widget .bravo-tp__write:hover{ color:var(--btp-full-purple); }
+
+  @media (prefers-reduced-motion: reduce){
+    #bravo-tp-widget .bravo-tp__track{ scroll-behavior:auto; }
+    #bravo-tp-widget .bravo-tp__card, #bravo-tp-widget .bravo-tp__cta{ transition:none; }
+  }
+</style>
+
+<script>
+  (function(){
+    var root = document.getElementById('bravo-tp-widget');
+    if (!root) return;
+
+    // ---- DATOS DE TRUSTPILOT (extraídos el 2026-07-09) ----
+    var REVIEWS = [
+      {"r":5,"name":"Manuel","date":"2026-07-07","title":"Pedí unas muestras y llegaron…","body":"Pedí unas muestras y llegaron perfectamente diferenciadas en sus cajas y aunque aun no he hecho el pedido porque tengo demasiados frentes abiertos, en cuanto pueda lo haré sin duda porque trabajan muy bien y con unos precios competitivos."},
+      {"r":5,"name":"Susana García","date":"2026-07-07","title":"Consulta","body":"Respuestas a cualquier duda, muy rápidas, calidad y precio perfecto. Se puede decir que obtienen las BBB por mi parte."},
+      {"r":5,"name":"Andreas Schmidt","date":"2026-07-07","title":"Césped artificial. Perfecto","body":"Césped artificial. Perfecto."},
+      {"r":5,"name":"Mercedes Tejedor Castillo","date":"2026-07-06","title":"El césped ha sido fácil de instalar.","body":"El césped ha sido fácil de instalar, el jardín ha quedado muy bien y las consultas que hice me fueron atendidas con rapidez. La calidad del césped es buena, volvería a comprar."},
+      {"r":5,"name":"Chini Rodriguez","date":"2026-07-04","title":"10 de 10","body":"El césped tiene una calidad precio increíble. La medida ha sido generosa y sobraba un poquito por si acaso. Cuando tuvimos dudas, nos las resolvieron sin problema, y el pedido llegó incluso un poco antes de lo que nos dijeron. Ha sido una experiencia de 10. Altamente recomendable."},
+      {"r":5,"name":"Lara Nuñez Gómez","date":"2026-07-01","title":"Para recomendar","body":"La calidad por el precio que he pagado es increíble. La comunicación con unas dudas e imprevistos que surgieron fue maravillosa, jamás había puesto césped y fue muy fácil instalarlo. Estoy encantada con la compra, sin duda lo recomiendo."},
+      {"r":5,"name":"cliente","date":"2026-07-01","title":"Buena calidad","body":"Buena calidad."},
+      {"r":5,"name":"Beatriz","date":"2026-06-29","title":"Producto perfecto","body":"Producto perfecto, envío en tiempo, y calidad perfecta."},
+      {"r":5,"name":"Luis Rubio Blanco","date":"2026-06-26","title":"Atención y producto excelente y rápida respuesta","body":"Solicitamos 3 muestras y llegaron muy rápido, en 2 días. Posteriormente hicimos pedido de césped con el kit de instalación (que viene perfecto para la instalación tanto en tierra como en suelo solado), y llegó todo bien, excepto que el césped vino mal cortado y la mitad, en un primer momento muy descontentos por esta situación. Nos pusimos en contacto con Bravocesped a través del teléfono de atención al cliente con Nicolás, primero por WhatsApp y luego por teléfono, y se comprometió a que en 2 días nos retiraba el césped erróneo y nos traía uno nuevo con las medidas correctas. Así fue, cumplió con lo hablado y nos dio indicaciones directamente sobre el terreno donde instalamos posteriormente el césped. Una compra muy satisfactoria y con atención al cliente excelente que hace que recomendemos esta página para comprar césped, por su calidad en el producto y sobretodo el servicio de Nicolás."},
+      {"r":5,"name":"Marius Serea","date":"2026-06-16","title":"Hice 2 pedidos, los dos muy rápidos y…","body":"Hice 2 pedidos, los dos muy rápidos y muy buena calidad."},
+      {"r":5,"name":"cliente","date":"2026-06-16","title":"Porque estuve informada desde el…","body":"Porque estuve informada desde el principio hasta que recibí mi pedido en todo momento."},
+      {"r":5,"name":"Raúl Martínez Juez","date":"2026-06-13","title":"Material ha cumplido mis expectativas","body":"Material ha cumplido mis expectativas."},
+      {"r":5,"name":"Marcos","date":"2026-06-10","title":"Atención inmejorable","body":"Atención inmejorable. Rápidos en contestar por WhatsApp, buen producto y a precio competitivo. Los voy a recomendar."},
+      {"r":5,"name":"kazan","date":"2026-06-03","title":"Todo perfecto","body":"Un 10 en casi todo, en atención al cliente, un 12."},
+      {"r":5,"name":"Francisco Javier Fernández","date":"2026-06-02","title":"El producto y la atención han sido…","body":"El producto y la atención han sido excelente."},
+      {"r":5,"name":"Perted","date":"2026-06-02","title":"Perfecto","body":"Perfecto, tal como se describe, y muy rápido el envío."},
+      {"r":5,"name":"Mario","date":"2026-06-02","title":"Buen producto","body":"Césped de buena calidad y a buen precio."},
+      {"r":5,"name":"Javier García Jiménez","date":"2026-06-02","title":"Todo genial","body":"Fueron rápidos, amables y aunque hubo un problema con el envío lo solventaron rápido y de una manera muy cordial. Si lo vuelvo a poner sin duda lo volveré a comprar en bravocesped."}
+    ];
+
+    var MONTHS = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+    function fmtDate(iso){
+      var d = new Date(iso + "T00:00:00");
+      return d.getDate() + " de " + MONTHS[d.getMonth()] + " de " + d.getFullYear();
+    }
+    function initials(name){
+      return name.trim().split(/\s+/).slice(0,2).map(function(w){return w[0]||"";}).join("").toUpperCase();
+    }
+    function starSvg(filled){
+      return '<svg viewBox="0 0 20 19" width="16" height="15"><path d="M9.07.61c.34-.81 1.51-.81 1.86 0l2.03 4.82c.14.34.47.58.84.61l5.27.42c.89.07 1.25 1.17.57 1.75l-4.01 3.39c-.29.25-.41.62-.32.99l1.22 5.07c.21.86-.74 1.54-1.5 1.08l-4.51-2.72c-.32-.2-.73-.2-1.05 0l-4.51 2.72c-.76.46-1.71-.22-1.5-1.08l1.22-5.07c.09-.37-.03-.74-.32-.99L.35 8.2c-.68-.58-.32-1.68.57-1.75l5.27-.42c.38-.03.7-.27.85-.61L9.07.61Z" fill="' + (filled ? "currentColor" : "rgba(159,144,192,0.35)") + '"/></svg>';
+    }
+    function starsHTML(rating){
+      var out = "";
+      for (var i=1;i<=5;i++){ out += starSvg(i <= rating); }
+      return out;
+    }
+    function escapeHTML(s){
+      return String(s).replace(/[&<>"']/g, function(c){
+        return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c];
+      });
+    }
+
+    var track = root.querySelector('#bravo-tp-track');
+    // Filtrar: solo reseñas positivas (4 y 5 estrellas). Ocultamos las negativas.
+    var VISIBLE = REVIEWS.filter(function(rv){ return rv.r >= 4; });
+    // Orden: primero mejor puntuación, luego reseñas más completas (texto más largo),
+    // finalmente más recientes.
+    VISIBLE.sort(function(a,b){
+      if (a.r !== b.r) return b.r - a.r;
+      var la = (a.body || "").length, lb = (b.body || "").length;
+      if (la !== lb) return lb - la;
+      return a.date < b.date ? 1 : -1;
+    });
+
+    var html = "";
+    VISIBLE.forEach(function(rv, idx){
+      var body = rv.body || "";
+      var isLong = body.length > 160;
+      html += '<article class="bravo-tp__card' + (isLong ? '' : ' is-short') + '" role="listitem">'
+        + '<div class="bravo-tp__card-stars" aria-label="' + rv.r + ' de 5 estrellas">' + starsHTML(rv.r) + '</div>'
+        + '<h3 class="bravo-tp__card-title">' + escapeHTML(rv.title) + '</h3>'
+        + '<p class="bravo-tp__card-body">' + escapeHTML(body) + '</p>'
+        + (isLong ? '<button type="button" class="bravo-tp__card-toggle" aria-expanded="false"><span class="bravo-tp__card-toggle-label">Leer más</span> '
+          + '<svg class="bravo-tp__card-toggle-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></button>' : '')
+        + '<div class="bravo-tp__card-meta">'
+          + '<span class="bravo-tp__card-name"><span class="bravo-tp__avatar">' + escapeHTML(initials(rv.name)) + '</span>' + escapeHTML(rv.name) + '</span>'
+          + '<span class="bravo-tp__card-date">' + fmtDate(rv.date) + '</span>'
+        + '</div>'
+      + '</article>';
+    });
+    track.innerHTML = html;
+
+    // Expandir / contraer reseñas largas
+    track.querySelectorAll('.bravo-tp__card-toggle').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var card = btn.closest('.bravo-tp__card');
+        var expanded = card.classList.toggle('is-expanded');
+        btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        var label = btn.querySelector('.bravo-tp__card-toggle-label');
+        if (label) label.textContent = expanded ? 'Ver menos' : 'Leer más';
+        btn.querySelector('.bravo-tp__card-toggle-icon').style.transform = expanded ? 'rotate(180deg)' : 'rotate(0deg)';
+        updateNav();
+      });
+    });
+
+    // Navegación — animación suave de una tarjeta en una
+    var viewport = root.querySelector('.bravo-tp__track-viewport');
+    var prev = root.querySelector('.bravo-tp__nav--prev');
+    var next = root.querySelector('.bravo-tp__nav--next');
+    var GAP = 20; // 1.25rem
+    function cardStep(){
+      var card = track.querySelector('.bravo-tp__card');
+      return card ? (card.getBoundingClientRect().width + GAP) : 320;
+    }
+    function maxScroll(){ return Math.max(0, track.scrollWidth - track.clientWidth); }
+    function updateNav(){
+      var atStart = track.scrollLeft <= 2;
+      var atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+      if(prev) prev.disabled = atStart;
+      if(next) next.disabled = atEnd;
+      // Ocultar el difuminado del extremo correspondiente (primera/última carta)
+      if(viewport){
+        viewport.classList.toggle('is-start', atStart);
+        viewport.classList.toggle('is-end', atEnd);
+      }
+    }
+
+    // Easing easeInOutCubic: acelera y frena suavemente (sensación de deslizamiento)
+    function easeInOutCubic(t){
+      return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2;
+    }
+    var REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var rafId = null;
+    var targetScroll = track.scrollLeft; // a dónde nos dirigimos (permite encolar clics)
+    function animateScroll(target){
+      target = Math.max(0, Math.min(maxScroll(), target));
+      targetScroll = target;
+      var start = track.scrollLeft;
+      var delta = target - start;
+      if(REDUCED || Math.abs(delta) < 1){
+        if(rafId){ cancelAnimationFrame(rafId); rafId = null; }
+        track.scrollLeft = target; updateNav(); return;
+      }
+      // Duración proporcional a la distancia (más natural con varias tarjetas)
+      var duration = Math.min(900, 380 + Math.abs(delta) * 0.35);
+      var startTime = null;
+      if(rafId) cancelAnimationFrame(rafId);
+      // Desactivar el scroll-snap durante la animación: si no, "imanta" la
+      // posición a la tarjeta más cercana y se pierde el deslizamiento.
+      track.style.scrollSnapType = 'none';
+      function frame(ts){
+        if(startTime === null) startTime = ts;
+        var p = Math.min((ts - startTime) / duration, 1);
+        track.scrollLeft = start + delta * easeInOutCubic(p);
+        if(p < 1){ rafId = requestAnimationFrame(frame); }
+        else {
+          rafId = null; track.scrollLeft = target;
+          track.style.scrollSnapType = ''; // restaurar el snap (CSS: proximity)
+          updateNav();
+        }
+      }
+      rafId = requestAnimationFrame(frame);
+    }
+    // Avanza/retrocede exactamente una tarjeta desde el destino actual
+    function go(dir){
+      var step = cardStep();
+      var base = rafId ? targetScroll : track.scrollLeft; // encola si ya se está moviendo
+      var index = Math.round(base / step);
+      animateScroll((index + dir) * step);
+    }
+    prev && prev.addEventListener('click', function(){ go(-1); });
+    next && next.addEventListener('click', function(){ go(1); });
+    track.addEventListener('scroll', updateNav, {passive:true});
+    window.addEventListener('resize', updateNav);
+    updateNav();
+  })();
+</script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Preview Widget Trustpilot — Bravo Césped</title>
+<link rel="stylesheet" href="bravocesped.webflow/css/normalize.css" />
+<link rel="stylesheet" href="bravocesped.webflow/css/bravocesped.css" />
+<link rel="stylesheet" href="bravocesped.webflow/css/components.css" />
+<style>
+  body{
+    margin:0;
+    background:#f5f8ec;
+    font-family: "Cabinetgrotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .demo-nav{
+    position:fixed; top:1rem; left:1rem; z-index:50;
+    display:flex; gap:.5rem; flex-wrap:wrap; background:#103a2e; color:#fff;
+    padding:.5rem .75rem; border-radius:99px; font-size:.8rem;
+  }
+  .demo-nav button{
+    border:none; background:#ddd2fa; color:#103a2e; font-weight:700;
+    padding:.3rem .7rem; border-radius:99px; cursor:pointer; font-family:inherit;
+  }
+  .demo-nav button.is-active{ background:#efea2f; }
+  .demo-section{ padding: clamp(2rem, 6vw, 5rem) 1.25rem; }
+  .demo-h{ text-align:center; color:#103a2e; margin:0 0 2rem; font-size:1.5rem; font-weight:700; }
+</style>
+</head>
+<body>
+  <div class="demo-nav">
+    <strong style="align-self:center;margin-right:.5rem;">Variante:</strong>
+    <button data-v="lavanda" class="is-active">Lavanda</button>
+    <button data-v="verde">Verde</button>
+    <button data-v="crema">Crema</button>
+    <button data-v="oscuro">Oscuro</button>
+  </div>
+
+  <section class="demo-section">
+    <h1 class="demo-h">Widget de reseñas Trustpilot · Bravo Césped</h1>
+    <!-- WIDGET -->
+    <div id="bravo-tp-widget-mount"></div>
+  </section>
+
+<script>
+  // Cargar el widget desde su archivo y montarlo en esta página para previsualizar.
+  fetch('widget-trustpilot.html')
+    .then(function(r){ return r.text(); })
+    .then(function(html){
+      var doc = new DOMParser().parseFromString(html, 'text/html');
+      // Capturar style y script ANTES de mover nodos
+      var styleEl = doc.querySelector('style');
+      var scriptEl = doc.querySelector('script');
+      var scriptText = scriptEl ? scriptEl.textContent : '';
+      var mount = document.getElementById('bravo-tp-widget-mount');
+      var widgetNode = doc.getElementById('bravo-tp-widget');
+      if (widgetNode) mount.appendChild(widgetNode);
+      if (styleEl) document.head.appendChild(styleEl);
+      if (scriptText) {
+        var s = document.createElement('script');
+        s.textContent = scriptText;
+        document.body.appendChild(s);
+      }
+    })
+    .catch(function(e){ console.error('No se pudo cargar el widget:', e); });
+
+  // Cambiador de variantes
+  document.addEventListener('click', function(e){
+    if(!e.target.matches('.demo-nav button')) return;
+    var v = e.target.getAttribute('data-v');
+    document.querySelectorAll('.demo-nav button').forEach(function(b){ b.classList.remove('is-active'); });
+    e.target.classList.add('is-active');
+    var w = document.getElementById('bravo-tp-widget');
+    if (w) w.setAttribute('data-tp-variant', v);
+  });
+</script>
+</body>
+</html>
