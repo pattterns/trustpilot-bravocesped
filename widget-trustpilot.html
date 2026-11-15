@@ -37,7 +37,7 @@
               <svg class="bravo-tp__star is-filled" viewBox="0 0 20 19" width="20" height="19"><path d="M9.07.61c.34-.81 1.51-.81 1.86 0l2.03 4.82c.14.34.47.58.84.61l5.27.42c.89.07 1.25 1.17.57 1.75l-4.01 3.39c-.29.25-.41.62-.32.99l1.22 5.07c.21.86-.74 1.54-1.5 1.08l-4.51-2.72c-.32-.2-.73-.2-1.05 0l-4.51 2.72c-.76.46-1.71-.22-1.5-1.08l1.22-5.07c.09-.37-.03-.74-.32-.99L.35 8.2c-.68-.58-.32-1.68.57-1.75l5.27-.42c.38-.03.7-.27.85-.61L9.07.61Z" fill="currentColor"/></svg>
               <svg class="bravo-tp__star is-half" viewBox="0 0 20 19" width="20" height="19"><defs><linearGradient id="bravo-tp-half"><stop offset="50%" stop-color="currentColor"/><stop offset="50%" stop-color="transparent"/></linearGradient></defs><path d="M9.07.61c.34-.81 1.51-.81 1.86 0l2.03 4.82c.14.34.47.58.84.61l5.27.42c.89.07 1.25 1.17.57 1.75l-4.01 3.39c-.29.25-.41.62-.32.99l1.22 5.07c.21.86-.74 1.54-1.5 1.08l-4.51-2.72c-.32-.2-.73-.2-1.05 0l-4.51 2.72c-.76.46-1.71-.22-1.5-1.08l1.22-5.07c.09-.37-.03-.74-.32-.99L.35 8.2c-.68-.58-.32-1.68.57-1.75l5.27-.42c.38-.03.7-.27.85-.61L9.07.61Z" fill="url(#bravo-tp-half)" stroke="currentColor" stroke-width="0.6"/></svg>
             </span>
-            <span class="bravo-tp__count">Basado en <strong>39</strong> opiniones</span>
+            <span class="bravo-tp__count">Basado en <strong>42</strong> opiniones</span>
           </span>
         </a>
       </div>
@@ -58,7 +58,7 @@
 
     <!-- Pie -->
     <div class="bravo-tp__footer">
-      <a class="bravo-tp__cta" href="https://es.trustpilot.com/review/www.bravocesped.com" target="_blank" rel="noopener">Ver las 39 opiniones en Trustpilot</a>
+      <a class="bravo-tp__cta" href="https://es.trustpilot.com/review/www.bravocesped.com" target="_blank" rel="noopener">Ver las 42 opiniones en Trustpilot</a>
       <a class="bravo-tp__write" href="https://es.trustpilot.com/evaluate/www.bravocesped.com" target="_blank" rel="noopener">Escribir una opinión</a>
     </div>
   </div>
@@ -365,8 +365,11 @@
     var root = document.getElementById('bravo-tp-widget');
     if (!root) return;
 
-    // ---- DATOS DE TRUSTPILOT (extraídos el 2026-11-08) ----
+    // ---- DATOS DE TRUSTPILOT (extraídos el 2026-11-15) ----
     var REVIEWS = [
+      {"r":5,"name":"cliente","date":"2026-11-10","title":"Buenos días no entiendo porque un rollo…","body":"La atencion fue excelente en todo momento y nos asesoraron muy bien. El césped elegido ha sido el idóneo. Un placer tratar con empresas que entienden al cliente y lo ayudan en todo momento.Sin duda lo recomendaremos."},
+      {"r":4,"name":"cliente","date":"2026-11-10","title":"Fueron muy rápidos en el envío de las…","body":"Fueron muy rápidos en el envío de las muestras, y posteriormente la atención telefónica muy buena"},
+      {"r":5,"name":"LUIS JUAN","date":"2026-11-09","title":"Sobre todo por la atención","body":"Sobre todo por la atención, cercana, rápida y eficiente cuando surgen problemas,"},
       {"r":5,"name":"cliente","date":"2026-10-15","title":"El césped me llegó muy rápido","body":"El césped me llegó muy rápido. Me fue muy fácil elegir con las muestras que me enviaron previamente y sus consejos"},
       {"r":4,"name":"María Tomillares","date":"2026-09-17","title":"Amabilidad y diligencia.","body":"Amabilidad y diligencia.Llegaron las muestras. Se ve buena calidad"},
       {"r":5,"name":"B Víctor","date":"2026-08-30","title":"Perfecto trato, entrega y muestras","body":"Perfecto, gran comunicación y rápida entrega pese a las fechas críticas. Recomiendo 100%, aparte las muestras ayudan mucho a escoger bien"},
@@ -384,9 +387,6 @@
       {"r":5,"name":"Mercedes Tejedor Castillo","date":"2026-07-06","title":"El césped ha sido fácil de instalar.","body":"El césped ha sido fácil de instalar, el jardín ha quedado muy bien y las consultas que hice, me fueron atendidas con rapidez.La calidad del césped es buena, volvería a comprar."},
       {"r":5,"name":"Chini Rodriguez","date":"2026-07-04","title":"10 de 10","body":"El césped tiene una calidad precio increíble. La medida ha sido generosa y sobraba un poquito por si acaso. Cuando tuvimos dudas, nos las resolvieron sin problema, y el pedido llegó incluso un poco antes de lo que nos dijeron. Ha sido una experiencia de 10. Altamente recomendable."},
       {"r":5,"name":"Lara Nuñez gomez","date":"2026-07-01","title":"Para recomendar ! ","body":"La calidad por el precio que he pagado es increíble. La comunicación con unas dudas e imprevistos que surgieron fue maravillosa, jamás había puesto césped y fue muy fácil instalarlo. Estoy encantada con la compra, sin duda lo recomiendo."},
-      {"r":5,"name":"cliente","date":"2026-07-01","title":"Buenas calidad","body":"Buenas calidad"},
-      {"r":5,"name":"Beatriz","date":"2026-06-29","title":"producto perfecto","body":"producto perfecto, envío en tiempo, y calidad perfecta."},
-      {"r":5,"name":"Luis Rubio Blanco","date":"2026-06-26","title":"Atención y producto excelente y sobretodo rápida capacidad y respuesta a los problemas","body":"Solicitamos 3 muestras y llegaron muy rápido 2 días.Posteriormente hicimos pedido de césped con el kit de instalación (que viene perfecto para la instalación tanto en tierra como en suelo solado), y llego todo bien excepto que el césped vino mal cortado y la mitad (en un primer momento muy descontentos por esta situación).Por ello, nos pusimos en contacto con Bravocesped a través del teléfono de atención al cliente de la web con Nicolás (encargado directo de la atención al cliente final).Primero hablamos por WhatsApp y luego por teléfono para solventar este problema y se comprometió a que en 2 días nos retiraba el césped erróneo y nos traía uno nuevo con las medidas correctas. Así fue, cumplió con lo hablado y nos dio indicaciones directamente sobre el terreno donde instalamos posteriormente el césped.Una compra muy satisfactoria y con atención al cliente excelente que hace que recomendemos esta página para comprar césped, por su calidad en el producto y sobretodo el servicio de Nicolás."},
     ];
 
     var MONTHS = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
